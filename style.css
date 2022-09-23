@@ -1,0 +1,863 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  /* background: rebeccapurple; */
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background-color: rebeccapurple;
+}
+
+.navbar.sticky .logo a span {
+  color: white;
+}
+
+.max-width {
+  max-width: 0 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  transition: all 0.3s ease;
+  color: rebeccapurple;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: white;
+  margin-left: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: rebeccapurple;
+}
+
+.navbar.navbar.sticky .menu li a:hover {
+  color: white;
+}
+
+/* menu btn sytling */
+.menu-btn {
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* home section styling */
+.home {
+  display: flex;
+  height: 100vh;
+  background: url("https://portalzine.de/wp-content/uploads/sites/3/2016/09/particles2.jpg")
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.text1 {
+  font-size: 27px;
+}
+
+.text2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.text3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.text3 span {
+  color: rebeccapurple;
+  font-weight: 400;
+}
+
+.home-content a {
+  display: inline-block;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 12px;
+  border-radius: 5px;
+  border: 2px solid rebeccapurple;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.home-content a:hover {
+  color: rebeccapurple;
+  background: none;
+}
+
+/* all similar content styling code */
+section {
+  padding: 100px 0;
+}
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+.project footer {
+  font-family: "Poppins", sans-serif;
+}
+
+.about-content,
+.services .serv-content,
+.skills,
+.skills-content,
+.project,
+.project-content,
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background-color: black;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: rebeccapurple;
+  padding: 5px;
+  background: white;
+  transform: translateX(-50%);
+}
+
+/* about sections start here */
+.about .title::after {
+  content: "who i am";
+}
+
+.about-container .home {
+  height: 60vh;
+}
+
+.left {
+  width: 45%;
+}
+
+.about-content .left img {
+  height: 400px;
+  width: 400px;
+  /* object-fit: cover; */
+  border-radius: 120px;
+  border: 5px solid rebeccapurple;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.right {
+  width: 55%;
+}
+
+.right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.right .text span {
+  color: rebeccapurple;
+  margin-left: 3px;
+}
+
+.right p {
+  text-align: justify;
+}
+
+.right a {
+  display: inline-block;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px solid rebeccapurple;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.right a:hover {
+  color: rebeccapurple;
+  background: none;
+}
+
+/* Services section starts here */
+.services,
+.teams {
+  color: white;
+  background: black;
+}
+
+/* .services .title::after,.teams .title::after{
+    background: black;
+    content: "what i provide";
+} */
+
+.services .title::before,
+.teams .title::before {
+  background: white;
+}
+
+.services .title::after,
+.teams .title::after {
+  background: black;
+  content: "what i provide";
+}
+
+.services .serv-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.services .serv-content .card:hover {
+  background: rebeccapurple;
+}
+
+.services .serv-content .card:hover i {
+  color: white;
+}
+
+.services .serv-content .card i {
+  color: rebeccapurple;
+  font-size: 50px;
+  transition: color 0.3s ease;
+}
+
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+/* skills section styling */
+.skills .title::after {
+  content: "what i know";
+}
+
+.skills .skills-content .column {
+  width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+  text-align: justify;
+}
+
+.skills .skills-content .left a {
+  display: inline-block;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  margin-top: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px solid rebeccapurple;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover {
+  color: rebeccapurple;
+  background: none;
+}
+
+.skills .skills-content .right .bars {
+  margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.skills .skills-content .right .line {
+  height: 5px;
+  width: 100%;
+  background: black;
+  position: relative;
+}
+
+.skills .skills-content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rebeccapurple;
+}
+
+.skills .skills-content .right .html::before {
+  width: 90%;
+}
+.skills .skills-content .right .css::before {
+  width: 50%;
+}
+.skills .skills-content .right .js::before {
+  width: 40%;
+}
+.skills .skills-content .right .c::before {
+  width: 80%;
+}
+.skills .skills-content .right .python::before {
+  width: 70%;
+}
+
+/* teams styling section start here */
+.teams .title::after {
+  content: "who with me";
+}
+.teams {
+  background: black;
+}
+
+.teams .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teams .carousel .card:hover {
+  background: rebeccapurple;
+}
+
+.teams .carousel .card:hover .box {
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.teams .carousel .card {
+  background: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
+  margin: 11px 11px;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rebeccapurple;
+}
+
+.teams .carousel .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card:hover img {
+  border-color: white;
+}
+
+/* contact styling starts here */
+
+.contact-content {
+  display: flex;
+  padding: 29px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.contact-content .left img {
+  height: 130px;
+  margin-left: 41px;
+  width: 145px;
+  /* object-fit: cover; */
+  border-radius: 120px;
+  border: 5px solid rebeccapurple;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  margin-bottom: 158px;
+  margin-top: 8px;
+}
+
+.contact .max-width {
+  padding: 0 159px;
+}
+
+.left {
+  width: 45%;
+}
+
+.contact .title:after {
+  content: "get in touch";
+}
+
+.contact .text {
+  margin: 14px 20px;
+  font-size: 24px;
+  color: rebeccapurple;
+}
+
+.contact .column-right {
+  position: relative;
+  left: 58px;
+  width: 55%;
+}
+
+form .fields {
+  display: flex;
+}
+
+form .fields .field {
+  height: 45px;
+  width: 100%;
+}
+
+.field input {
+  height: 100%;
+  width: 84%;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 6px;
+  outline: none;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.field input:focus {
+  border-color: rebeccapurple;
+}
+
+.field textarea {
+  height: 100%;
+  width: 84%;
+  border: 1px solid lightgrey;
+  outline: none;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 6px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.field textarea:focus {
+  border-color: rebeccapurple;
+}
+
+.btn button {
+  display: inline-block;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  margin-top: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px solid rebeccapurple;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  transition: all 0.3s ease;
+  margin-left: 14px;
+}
+
+.btn button:hover {
+  background: none;
+  color: rebeccapurple;
+}
+
+/* project Sections starts here */
+.project .title::after {
+  content: "projects";
+}
+
+.left {
+  width: 45%;
+}
+
+.project-content .left img {
+  height: 400px;
+  width: 400px;
+  /* object-fit: cover; */
+  border-radius: 120px;
+  border: 5px solid rebeccapurple;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 24px;
+}
+
+.right {
+  width: 55%;
+}
+
+.right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.right .text span {
+  color: rebeccapurple;
+  
+}
+
+.right p {
+  text-align: justify;
+}
+
+.right a {
+  display: inline-block;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px solid rebeccapurple;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.right a:hover {
+  color: rebeccapurple;
+  background: none;
+}
+
+/* footer Sections starts here */
+footer {
+  background: rebeccapurple;
+  padding: 20px 23px;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+}
+
+footer span a {
+  color: rgb(194, 124, 138);
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+
+/* responsive media query start here */
+@media screen and (max-width: 968px) {
+  .max-width {
+    padding: 0 50px;
+  }
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background-color: black;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.5s ease;
+  }
+
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .text2 {
+    font-size: 55px;
+    margin: 10px 0;
+  }
+
+  .text3 {
+    font-size: 30px;
+  }
+
+  .home-content a {
+    font-size: 20px;
+  }
+
+  /* about section starts here  */
+  .about-content .column,
+  .project-content .column {
+    width: 50%;
+  }
+
+ 
+
+  .max-width {
+    max-width: 800px;
+  }
+
+  /* .about-content{
+        width: 50%;
+    }    */
+
+  .about-content .left,
+  .project-content .left {
+    display: flex;
+    justify-self: unset;
+    margin: 0 auto 60px;
+  }
+
+  .about-content .right,
+  .project-content .right {
+    flex: 100%;
+  }
+
+  .about-content .left img,
+  .project-content .left img {
+    height: 350px;
+    width: 350px;
+    margin: 0 -66px;
+  }
+
+  /* services section starts here */
+  .services .serv-content .card,
+  .skills .skills-content .column {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  section .title {
+    padding-bottom: 92px;
+  }
+
+  .skills .skills-content .right {
+    margin-top: 32px;
+  }
+
+  /* teams sections */
+  .teams .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  /* contact sections */
+  .contact .column-right {
+    position: relative;
+    left: -16px;
+    width: 137%;
+    bottom: 45px;
+  }
+
+  .contact .left p {
+    position: relative;
+    bottom: 112px;
+    margin-right: 322px;
+    margin-top: 27px;
+    margin-left: 1px;
+    padding: 0 3px;
+    width: 245px;
+  }
+
+  .field input {
+    width: 108%;
+  }
+
+  .field textarea {
+    width: 108%;
+  }
+
+  .contact .max-width {
+    padding: 0 43px;
+  }
+
+  /* project section */
+  .project-content .left img {
+    height: 233px;
+    width: 289px;
+    margin: 0 -41px;
+    position: relative;
+    right: 34px;
+  }
+
+  .about-container .home {
+    height: 48vh;
+  }
+
+  .project .right a {
+    margin-bottom: 81px;
+  }
+}
+
+  
+  
+@media screen and (min-width: 540px) {
+  .project-content .left img {
+    margin: 0 -5px;
+  }
+  
+  .right .text span {
+    margin-left: 101px;
+  }
+  
+  .project .right span.todo {
+    margin-left: 149px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-content .left img {
+    margin: 0 -4px;
+  }
+
+  .project-content .left img {
+    margin: 0 52px;
+  }
+  
+  .right .text span {
+    margin-left: 224px;
+  }
+  
+  .project .right span.todo {
+    margin-left: 250px;
+  }
+}
+
+@media screen and (min-width: 820px){
+  .project-content .left img {
+    margin: 0 58px;
+}
+
+.right .text span {
+  margin-left: 220px;
+}
+
+.project .right span.todo {
+  margin-left: 260px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .about-content .left img {
+    margin-left: -54px;
+  }
+  
+  .project-content .left img {
+    margin: 0 -61px 24px;
+  }
+}
+
